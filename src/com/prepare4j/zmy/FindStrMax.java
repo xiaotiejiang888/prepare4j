@@ -1,6 +1,6 @@
 package com.prepare4j.zmy;
 
-public class Test2 {
+public class FindStrMax {
     public static void main(String[] args) {
         String s1 = "qwerabcdtyuiop";
         String s2 = "xcabcdvbn";
