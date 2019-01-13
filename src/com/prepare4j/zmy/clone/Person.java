@@ -13,7 +13,10 @@ public class Person implements Cloneable {
 
     @Override
     protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
+        Person person = (Person)super.clone();
+        //手动对address属性进行clone，并赋值给新的person对象
+        person.address = (Address) address.clone();
+        return person;
     }
 
     public int getAge() {

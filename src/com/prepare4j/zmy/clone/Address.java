@@ -1,12 +1,17 @@
 package com.prepare4j.zmy.clone;
 
-public class Address {
+public class Address implements Cloneable{
     private String province;
     private String street;
 
     public Address(String province, String street) {
         this.province = province;
         this.street = street;
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 
     public String getProvince() {
