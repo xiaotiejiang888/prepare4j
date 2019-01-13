@@ -1,17 +1,13 @@
 package com.prepare4j.zmy.clone;
 
-public class Address implements Cloneable{
+public class Address extends DeepClone{
+    private static final long serialVersionUID = 1L;
     private String province;
     private String street;
 
     public Address(String province, String street) {
         this.province = province;
         this.street = street;
-    }
-
-    @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
     }
 
     public String getProvince() {

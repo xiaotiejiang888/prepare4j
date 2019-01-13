@@ -1,6 +1,7 @@
 package com.prepare4j.zmy.clone;
 
-public class Person implements Cloneable {
+public class Person extends DeepClone{
+    private static final long serialVersionUID = 1L;
     private int age;
     private String name;
     private Address address;
@@ -9,14 +10,6 @@ public class Person implements Cloneable {
         this.age = age;
         this.name = name;
         this.address = address;
-    }
-
-    @Override
-    protected Object clone() throws CloneNotSupportedException {
-        Person person = (Person)super.clone();
-        //手动对address属性进行clone，并赋值给新的person对象
-        person.address = (Address) address.clone();
-        return person;
     }
 
     public int getAge() {

@@ -4,10 +4,10 @@ package com.prepare4j.zmy.clone;
  * 浅拷贝测试
  */
 public class MTest {
-    public static void main(String[] args) throws CloneNotSupportedException {
+    public static void main(String[] args) throws Exception {
         Person person = new Person(15, "zhangsan", new Address("四川", "天府二街"));
 
-        Person clonePerson = (Person) person.clone();
+        Person clonePerson = (Person) person.deepClone();
 
         System.out.println(person);
         System.out.println(clonePerson);
