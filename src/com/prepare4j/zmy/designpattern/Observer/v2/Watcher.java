@@ -4,7 +4,7 @@ import java.util.Observable;
 import java.util.Observer;
 
 /**
- * 创建一个主题
+ * 创建一个观察者
  */
 public class Watcher implements Observer
 {

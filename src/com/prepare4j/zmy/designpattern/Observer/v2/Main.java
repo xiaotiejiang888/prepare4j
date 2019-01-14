@@ -22,6 +22,7 @@ public class Main {
 
         /** 创建观察者对象，并将被观察者对象登记 */
         Watcher watcher = new Watcher(watched);
+        Watcher watcher2 = new Watcher(watched);
 
         /** 给被观察者状态赋值 */
         watched.setData("start");
