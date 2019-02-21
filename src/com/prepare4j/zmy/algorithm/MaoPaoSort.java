@@ -3,7 +3,7 @@ package com.prepare4j.zmy.algorithm;
 /**
  * 冒泡排序:小的在左边，大的在右边
  */
-public class MaoPao {
+public class MaoPaoSort {
     public static void main(String[] args) {
 //        int i = (int)(Math.random()*(100+1));
 //        int j = (int)(Math.random()*(100+1));

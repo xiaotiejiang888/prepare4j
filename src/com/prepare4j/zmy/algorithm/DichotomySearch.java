@@ -1,7 +1,7 @@
 package com.prepare4j.zmy.algorithm;
 
 /**
- * 二分法查找
+ * 二分法查找   要求数组是有序的
  */
 public class DichotomySearch {
     public static void main(String[] args) {
