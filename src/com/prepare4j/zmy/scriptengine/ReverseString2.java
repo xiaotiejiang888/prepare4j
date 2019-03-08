@@ -15,7 +15,7 @@ public class ReverseString2 {
         try {
             // 将变量name和变量值abcdefg传给javascript脚本
 
-            engine.put("applyName",  500);
+            engine.put("name",  "zmy");
             // 开始执行脚本
 
             engine.eval("var output ='' ;" +
