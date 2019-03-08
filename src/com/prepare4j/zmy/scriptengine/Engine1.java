@@ -18,8 +18,7 @@ public class Engine1 {
             engine.put("applyMoney",  500);
             // 开始执行脚本
 
-            engine.eval("var output =0 ;" +
-                    "output = applyMoney;");
+            engine.eval("var output =0;output = applyMoney;");
             // 得到output变量的值
 
             int name = Integer.valueOf(engine.get("output").toString());
