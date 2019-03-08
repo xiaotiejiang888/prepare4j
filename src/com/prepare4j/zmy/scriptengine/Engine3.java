@@ -30,10 +30,10 @@ public class Engine3 {
 
             engine.put("applyMoney",  50);
             engine.put("ratio",  0.6d);
-            engine.put("maxMoney",  100);
+            engine.put("maxMoney",  0);
             // 开始执行脚本
 
-            engine.eval("var output = applyMoney * ratio;");
+            engine.eval("output = applyMoney * ratio;");
             // 得到output变量的值
 
             out.println("应报金额："+ engine.get("output"));

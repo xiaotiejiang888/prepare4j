@@ -20,7 +20,7 @@ public class Engine1 {
             engine.put("maxMoney",  0);
             // 开始执行脚本
 
-            engine.eval("var output = applyMoney;");
+            engine.eval("output = applyMoney;");
             // 得到output变量的值
 
             int money = Integer.valueOf(engine.get("output").toString());
