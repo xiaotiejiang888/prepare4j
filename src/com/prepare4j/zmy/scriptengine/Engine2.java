@@ -26,12 +26,12 @@ public class Engine2 {
         try {
             // 将变量name和变量值abcdefg传给javascript脚本
 
-            engine.put("applyMoney",  80);
+            engine.put("applyMoney",  180);
             engine.put("ratio",  0);
             engine.put("maxMoney",  100);
             // 开始执行脚本
 
-            engine.eval("output = applyMoney >= maxMoney?maxMoney:applyMoney");
+            engine.eval("output=applyMoney>=maxMoney?maxMoney:applyMoney");
             // 得到output变量的值
 
             int money = Integer.valueOf(engine.get("output").toString());

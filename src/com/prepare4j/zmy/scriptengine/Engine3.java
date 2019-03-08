@@ -33,7 +33,7 @@ public class Engine3 {
             engine.put("maxMoney",  0);
             // 开始执行脚本
 
-            engine.eval("output = applyMoney * ratio");
+            engine.eval("output=applyMoney * ratio");
             // 得到output变量的值
 
             out.println("应报金额："+ engine.get("output"));
