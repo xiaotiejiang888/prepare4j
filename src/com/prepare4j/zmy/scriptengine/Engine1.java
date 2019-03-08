@@ -16,9 +16,11 @@ public class Engine1 {
             // 将变量name和变量值abcdefg传给javascript脚本
 
             engine.put("applyMoney",  500);
+            engine.put("ratio",  0);
+            engine.put("maxMoney",  0);
             // 开始执行脚本
 
-            engine.eval("var output =0;output = applyMoney;");
+            engine.eval("var output = applyMoney;");
             // 得到output变量的值
 
             int money = Integer.valueOf(engine.get("output").toString());
