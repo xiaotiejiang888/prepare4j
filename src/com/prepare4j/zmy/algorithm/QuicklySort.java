@@ -21,11 +21,11 @@ public class QuicklySort {
 
     /**
      * @param array
-     * @param lo    指向起始位置
-     * @param hi    指向末尾
+     * @param start    指向起始位置
+     * @param end    指向末尾
      * @return
      */
-    public static int getMiddle(int[] array, int lo, int hi) {
+    public static int getMiddle(int[] array, int start, int end) {
         //固定的切分方式
         /**
          * 　把整个序列看做一个数组，把第零个位置看做中轴，和最后一个比
@@ -34,19 +34,19 @@ public class QuicklySort {
          * ，左边就是比中轴小的，右边就是比中轴大的，然后再用分治法
          * ，分别对这两个独立的数组进行排序。
          */
-        int key = array[lo];//数组的第一个作为中轴
-        while (lo < hi) {
-            while (array[hi] >= key && hi > lo) {//从后半部分向前扫描
-                hi--;
+        int key = array[start];//数组的第一个作为中轴
+        while (start < end) {
+            while (array[end] >= key && end > start) {//从后半部分向前扫描
+                end--;
             }
-            array[lo] = array[hi];
-            while (array[lo] <= key && hi > lo) {//从前半部分向后扫描
-                lo++;
+            array[start] = array[end];
+            while (array[start] <= key && end > start) {//从前半部分向后扫描
+                start++;
             }
-            array[hi] = array[lo];
+            array[end] = array[start];
         }
-        array[hi] = key;
-        return hi;
+        array[end] = key;
+        return end;
     }
 
     public static void sort(int[] array, int lo, int hi) {

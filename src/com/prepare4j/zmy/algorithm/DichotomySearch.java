@@ -1,5 +1,7 @@
 package com.prepare4j.zmy.algorithm;
 
+import java.util.Date;
+
 /**
  * 二分法查找   要求数组是有序的
  */
@@ -11,6 +13,9 @@ public class DichotomySearch {
         System.out.println(search(arr, 67));
         System.out.println(search(arr, 89));
         System.out.println(search(arr, 99));
+        Date date1 = new Date();
+        Date date2 = new Date();
+        date1.compareTo(date2);
     }
 
     public static int search(int[] arr, int key) {
