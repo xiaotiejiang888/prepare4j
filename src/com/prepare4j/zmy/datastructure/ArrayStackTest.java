@@ -1,6 +1,6 @@
 package com.prepare4j.zmy.datastructure;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class ArrayStackTest {
     //测试自定义栈类 ArrayStack
