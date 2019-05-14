@@ -5,6 +5,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.*;
 
+/**
+ * 单线程下没毛病了，都是运用到多线程下就有大问题了
+ */
 public class SimpleDateFormatTest {
     private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
@@ -24,7 +27,7 @@ public class SimpleDateFormatTest {
 
         for (int i = 0; i < 20; i++) {
             service.execute(() -> {
-                for (int j = 0; j < 10; j++) {
+                for (int j = 0; j < 5; j++) {
                     try {
                         System.out.println(parse("2018-01-02  09:45:59"));
                     } catch (ParseException e) {
