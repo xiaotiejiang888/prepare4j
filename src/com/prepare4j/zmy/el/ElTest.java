@@ -12,7 +12,7 @@ public class ElTest {
         //测试SpringEL解析器
         String template = "#{#user}，早上好";//设置文字模板,其中#{}表示表达式的起止，#user是表达式字符串，表示引用一个变量。
         String template2 = "#{(1+2)>3 ? 'yes' : 'no'}";
-        String template3 = "#{(#os=='02')? 'yes' : 'no'}";
+        String template3 = "#{(#os=='02' && #brand=='Samsung')? '5.1' : #version}";
         ExpressionParser paser = new SpelExpressionParser();//创建表达式解析器
 
         //通过evaluationContext.setVariable可以在上下文中设定变量。
