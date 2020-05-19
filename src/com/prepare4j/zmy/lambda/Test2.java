@@ -10,5 +10,7 @@ public class Test2 {
         List<Student> list = Arrays.asList(new Student("11"), new Student("22"), new Student("33"), new Student("44"));
         String collect = list.stream().map(Student::getName).collect(Collectors.joining(","));
         System.out.println(collect);
+
+
     }
 }

@@ -8,6 +8,8 @@ import java.lang.reflect.Proxy;
  */
 public class ProxyTest {
     public static void main(String[] args) {
+        //设置系统属性，把生成的代理类写入到文件
+        //JDK动态代理技术是在运行时直接生成类的字节码，并载入到虚拟机执行的。这里不存在class文件的，所以我们通过设置系统属性，把生成的字节码保存到文件，用于后面进一步分析。
         System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles","true");
         //Proxy.newProxyInstance(loader, classes, h)返回的对象是实现了指定接口的类对象
         /**

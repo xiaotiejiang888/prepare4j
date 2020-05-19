@@ -25,27 +25,27 @@ public class LocalDateTimeTest {
 
     public static void main(String[] args) throws InterruptedException, ParseException {
 
-        MyThreadFactory myFactory=new MyThreadFactory("MyThreadFactory");
-        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(5, 5,
-                0L, TimeUnit.MILLISECONDS,
-                new LinkedBlockingQueue<Runnable>(100), myFactory);
-
-        //  20个线程
-        for (int i = 0; i < 20; i++) {
-            threadPoolExecutor.execute(() -> {
-                for (int j = 0; j < 10; j++) {
-                    try {
-                        System.out.println(Thread.currentThread().getName()+ " "+parse2(formatDate2(LocalDateTime.now())));
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-            });
-        }
-        //  等待上述的线程执行完
-        threadPoolExecutor.shutdown();
-        threadPoolExecutor.awaitTermination(1, TimeUnit.DAYS);
-
+//        MyThreadFactory myFactory=new MyThreadFactory("MyThreadFactory");
+//        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(5, 5,
+//                0L, TimeUnit.MILLISECONDS,
+//                new LinkedBlockingQueue<Runnable>(100), myFactory);
+//
+//        //  20个线程
+//        for (int i = 0; i < 20; i++) {
+//            threadPoolExecutor.execute(() -> {
+//                for (int j = 0; j < 10; j++) {
+//                    try {
+//                        System.out.println(Thread.currentThread().getName()+ " "+parse2(formatDate2(LocalDateTime.now())));
+//                    } catch (Exception e) {
+//                        e.printStackTrace();
+//                    }
+//                }
+//            });
+//        }
+//        //  等待上述的线程执行完
+//        threadPoolExecutor.shutdown();
+//        threadPoolExecutor.awaitTermination(1, TimeUnit.DAYS);
+        System.out.println(formatDate2(LocalDateTime.now()));
 
     }
 }
